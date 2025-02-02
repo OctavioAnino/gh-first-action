@@ -7,7 +7,9 @@ jobs:
     runs-on: ubuntu-latest # the host that runs the job
     steps:
       - name: Print greeting # good idea to name steps
-        run: echo "Hello World!" # the command or action that does something
+        run:  | # run multi-line shell commands
+          echo "Hello World!" # the command or action that does something
+          echo $(pwd)     
       - name: Print goodbye
         run: echo "Done - bye!"
       
