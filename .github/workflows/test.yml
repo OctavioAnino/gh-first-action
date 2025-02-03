@@ -14,9 +14,13 @@ jobs:
         with:
           node-version: '18'
       - name: Change Working Directory
-        run: cd $GITHUB_WORKSPACE
+        run: |
+          ls
+          cd $GITHUB_WORKSPACE/Section02
       - name: Verify CWD
-        run: pwd
+        run: |
+          ls
+          pwd
       - name: Install dependencies
         run: npm ci
       - name: Run tests
